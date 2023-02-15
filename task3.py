@@ -1,9 +1,15 @@
 while True:
-    str = input('Введите задачу в формате "первое число" "оператор" "второе число": :')
-    arr = str.split(' ')
-    num1 = int(arr[0])
-    num2 = int(arr[2])
-    char = arr[1]
+    str1 = input('Введите задачу: ')
+    chars = ['+', '-', '*', '/']
+    i = 0
+    while i < len(str1):
+        if str1[i] in chars:
+            num1 = int(str1[:i])
+            num2 = int(str1[i+1:])
+            char = str1[i]
+            print(char)
+            break
+        i = i + 1
     if char == '+':
         print(num1 + num2)
     elif char == '-':
