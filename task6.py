@@ -1,6 +1,7 @@
 a = input()
-l = len(a)
+l = len(a) - 1
 res = ''
-for i in range(l - 1, -1, -1):
-    res = res + a[i]
+while l > -1:
+    res = res + a[l]
+    l -= 1
 print(res)
