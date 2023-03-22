@@ -72,6 +72,5 @@ def select(a, s):
         return s
     elif a == 18:
         return 
-
-if __name__ == '__main__':
-    main()
+    
+main()
