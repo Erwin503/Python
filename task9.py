@@ -9,3 +9,4 @@ while True:
         print()
         break
 print(res)
+test.close()
