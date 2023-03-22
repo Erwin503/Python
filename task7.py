@@ -1,6 +1,8 @@
 def mul(operand, operator):
-    if operator == 1 or operand == 1:
+    if operator == 1:
         return operand
+    if operand == 1:
+        return operator
     elif operator == 0 or operand == 0:
         return 0
     else:
