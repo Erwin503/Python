@@ -65,4 +65,15 @@ def calculate(expression):
         result = evaluate_expression(operator, left_operand, right_operand)
         operand_stack.append(result)
 
-    #
+    return result
+
+
+
+
+
+
+
+
+
+line = input()
+print(calculate(line))
