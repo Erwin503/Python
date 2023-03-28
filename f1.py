@@ -1,6 +1,8 @@
 import re
+from tkinter import *
 
-def calculate(expression):
+def calculate():
+    expression = txt.get()
 
     tokens = re.findall(r'[-+*/%()]|\d+', expression)
 
@@ -64,16 +66,20 @@ def calculate(expression):
         left_operand = operand_stack.pop()
         result = evaluate_expression(operator, left_operand, right_operand)
         operand_stack.append(result)
-
-    return result
-
+    lbl.configure(text = result)
 
 
+window = Tk()
+window.title("Calculator")
+window.geometry('460x650')
 
+txt = Entry(window, width = 40)
+txt.grid(column = 0, row = 0)
 
+lbl = Label(window, text = "Результат")
+lbl.grid(column = 0, row = 1)
 
+btn = Button(window, text ="Погнали", command = calculate)
+btn.grid(column = 1, row =0)
 
-
-
-line = input()
-print(calculate(line))
+window.mainloop()
